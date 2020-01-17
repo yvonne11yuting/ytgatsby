@@ -68,6 +68,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          href: 'https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap',
+          rel: 'stylesheet',
+        }
+      ]}
     />
   )
 }
