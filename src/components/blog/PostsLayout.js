@@ -1,15 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "./common/Layout"
-import SEO from "../components/seo"
+import Layout from "../common/Layout"
+import SEO from "../seo"
+import { MdxStyles } from './PostsLayout.style'
 
 export default function PageTemplate({ data: { mdx } }) {
+  console.log(mdx.body)
   return (
     <Layout>
       <SEO title="blog content" />
-      <h1>{mdx.frontmatter.title}12345</h1>
-      <MDXRenderer>{mdx.body}</MDXRenderer>
+      <MdxStyles>
+        <h1>{mdx.frontmatter.title}</h1>
+        <MDXRenderer>{mdx.body}</MDXRenderer></MdxStyles>
     </Layout>
   )
 }
