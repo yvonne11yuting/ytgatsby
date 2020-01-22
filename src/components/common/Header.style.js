@@ -5,6 +5,7 @@ export const HeaderStyle = styled.header`
   left: 0;
   right: 0;
   top: 0;
+  z-index: 1;
   padding: 15px;
   font-size: 18px;
 `;

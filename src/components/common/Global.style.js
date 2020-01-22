@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     background: #676767;
     letter-spacing: .5px;
     text-size-adjust: 100%;
+    word-break: break-all;
   }
 
   a {

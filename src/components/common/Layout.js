@@ -8,14 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import GlobalStyle from './Global.style'
-import { LayoutContent } from './Layout.style';
-
+import { LayoutContent, CoverImg } from './Layout.style';
 import Header from "./Header";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+  const { site, coverImg } = useStaticQuery(graphql`
+    query CoverImageAndSiteTitleQuery {
+      coverImg: file(relativePath: { eq: "cover_main.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       site {
         siteMetadata {
           title
@@ -23,11 +30,11 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   return (
     <>
       <GlobalStyle/>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={site.siteMetadata.title} />
+      <CoverImg><Img fluid={coverImg.childImageSharp.fluid}/></CoverImg>
       <LayoutContent>
         <main>{children}</main>
         <footer>

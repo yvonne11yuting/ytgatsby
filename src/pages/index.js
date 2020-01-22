@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/common/Layout"
-import Image from "../components/image"
+import Image from "../components/Image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
