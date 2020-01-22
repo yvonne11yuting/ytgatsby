@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'PingFang', 'Roboto', '微軟正黑體', sans-serif;
     background: #676767;
     letter-spacing: .5px;
+    text-size-adjust: 100%;
   }
 
   a {
