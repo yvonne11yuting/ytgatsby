@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from '../components/common/Layout'
-import SEO from "../components/seo"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/common/Layout';
+import SEO from '../components/seo';
 
 const BlogIndex = ({ data }) => {
-  const { edges: posts } = data.allMdx
+  const { edges: posts } = data.allMdx;
   return (
     <Layout>
       <SEO title="Blog" />
@@ -21,8 +21,8 @@ const BlogIndex = ({ data }) => {
       </ul>
       <div>reference: https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/</div>
     </Layout>
-  )
-}
+  );
+};
 export const pageQuery = graphql`
   query blogIndex {
     allMdx {
@@ -40,5 +40,5 @@ export const pageQuery = graphql`
       }
     }
   }
-`
-export default BlogIndex
+`;
+export default BlogIndex;

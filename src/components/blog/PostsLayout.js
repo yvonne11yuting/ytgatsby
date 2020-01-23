@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../common/Layout"
-import SEO from "../seo"
-import { MdxStyles } from './PostsLayout.style'
-import Img from "gatsby-image"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Img from 'gatsby-image';
+import Layout from '../common/Layout';
+import SEO from '../seo';
+import { MdxStyles } from './PostsLayout.style';
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
@@ -13,9 +13,10 @@ export default function PageTemplate({ data: { mdx } }) {
       <Img fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid} />
       <MdxStyles>
         <h1>{mdx.frontmatter.title}</h1>
-        <MDXRenderer>{mdx.body}</MDXRenderer></MdxStyles>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </MdxStyles>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -35,4 +36,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

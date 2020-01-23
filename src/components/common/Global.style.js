@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 import * as restcss from 'reset-css/reset.css';
 
 const GlobalStyle = createGlobalStyle`
-  ${ restcss }
+  ${restcss}
   html * {
     line-height: 22px;
     color: #F1EDE5;

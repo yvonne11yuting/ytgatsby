@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MdxStyles = styled.div`
   h1, h2, h3, h4 {
