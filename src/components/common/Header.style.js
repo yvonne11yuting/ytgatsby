@@ -8,6 +8,10 @@ export const HeaderStyle = styled.header`
   z-index: 1;
   padding: 15px;
   font-size: 18px;
+
+  a {
+    font-family: 'Righteous', cursive;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -25,5 +29,10 @@ export const HeaderList = styled.ul`
 export const HeaderItem = styled.li`
   & + & {
     margin-left: 20px;
+  }
+
+  a:hover {
+    color: #fff;
+    text-shadow: 1px 1px 3px #f7ff7791;
   }
 `;

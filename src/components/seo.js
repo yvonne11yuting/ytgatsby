@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
       link={[
         {
-          href: 'https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap',
+          href: 'https://fonts.googleapis.com/css?family=Righteous|Roboto&display=swap',
           rel: 'stylesheet',
         }
       ]}
